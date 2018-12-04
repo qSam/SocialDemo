@@ -49,7 +49,19 @@
     $password = strip_tags($_POST['reg_password']);
     $password2 = strip_tags($_POST['reg_password2']);
 
+    //Date
     $date = date("Y-m-d");
+
+    if($em == $em2) {
+      //Check if email is in valid format
+      if(filter_var($em, FILTER_VALIDATE_EMAIL)) {
+        $em=filter_var($em, FILTER_VALIDATE_EMAIL);
+      } else {
+        echo "Invalid format";
+      }
+    } else {
+      echo "Emails don't match";
+    }
 
 
   }
