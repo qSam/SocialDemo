@@ -5,7 +5,7 @@
     echo "Failed to connect: ".mysqli_connect_errno();
   }
 
-  $query = mysqli_query($con, "INSERT INTO test VALUES('','Rocky')");
+  //$query = mysqli_query($con, "INSERT INTO test VALUES('','Rocky')");
 ?>
 
 
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  Hey there!
+  Hey there you!
 </body>
 
 </html>
