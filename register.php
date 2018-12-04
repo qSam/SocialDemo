@@ -73,6 +73,16 @@
       echo "Emails don't match";
     }
 
+    //Check first name length
+    if(strlen($fname) > 25 || strlen($fname) < 2) {
+      echo "Your first name must be between 2 and 25 characters";
+    }
+
+    //Check last name length
+    if(strlen($lname) > 25 || strlen($lname) < 2) {
+      echo "Your last name must be between 2 and 25 characters";
+    }
+
 
   }
 ?>
