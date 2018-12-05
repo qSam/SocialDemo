@@ -122,23 +122,24 @@
 
       }
 
+          //Select profile pic
+          $rand =rand(1, 2);
+          if($rand == 1) {
+            $profile_pic = "assets/images/profile_pics/defaults/head_deep_blue.png";
+          } else if ($rand == 2) {
+            $profile_pic = "assets/images/profile_pics/defaults/head_emerald.png";
+          }
+
+          $query = mysqli_query($con, "INSERT INTO users VALUES('','$fname','$lname','$username','$em','$password','$date','$profile_pic','0','0','no',',')");
+          array_push($error_array, "<span style='color: #14C800'>You are all set! Please login.</span><br />");
+
+          //Clear session variables
+          $_SESSION['reg_fname'] = "";
+          $_SESSION['reg_lname'] = "";
+          $_SESSION['reg_email'] = "";
+          $_SESSION['reg_email2'] = "";
+
     }
-
-    //Select profile pic
-    $rand =rand(1, 2);
-    if($rand == 1) {
-      $profile_pic = "assets/images/profile_pics/defaults/head_deep_blue.png";
-    } else if ($rand == 2) {
-      $profile_pic = "assets/images/profile_pics/defaults/head_emerald.png";
-    }
-
-    $query = mysqli_query($con, "INSERT INTO users VALUES('','$fname','$lname','$username','$em','$password','$date','$profile_pic','0','0','no',',')");
-
-
-
-
-
-
 
 
   }
@@ -205,6 +206,12 @@
       else if (in_array("Your password can only contain letters or numbers<br />",$error_array)) {echo "Your password can only contain letters or numbers<br />";}
       else if (in_array("Your password must be between 5 and 30 characters<br />",$error_array)) {echo "Your password must be between 5 and 30 characters<br />";}?>
       <input type="submit" name="register_button" value="Register">
+      <br />
+      <?php
+      if (in_array("<span style='color: #14C800'>You are all set! Please login.</span><br />",$error_array)) {
+        echo "<span style='color: #14C800'>You are all set! Please login.</span><br />";
+      }
+       ?>
   </form>
 </body>
 
