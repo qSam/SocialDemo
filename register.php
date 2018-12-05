@@ -1,10 +1,6 @@
 <?php
-  session_start();
-  $con = mysqli_connect("localhost","root","","social");
 
-  if(mysqli_connect_errno()) {
-    echo "Failed to connect: ".mysqli_connect_errno();
-  }
+  require 'config/config.php';
 
   //Declare variables to prevent errors
   $fname = "";
