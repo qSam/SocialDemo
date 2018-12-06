@@ -13,7 +13,13 @@
 
 <body>
   <div class="wrapper">
+
     <div class="login_box">
+      <div class="login_header">
+        <h1>Seattle Feed</h1>
+        Login or Sign Up Below
+      </div>
+
     <form action="register.php" method="POST">
     <input type="email" name="log_email" placeholder="Email address"
     value="<?php
