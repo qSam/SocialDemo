@@ -8,6 +8,7 @@
 <html>
 <head>
   <title>Social Demo</title>
+  <link rel="stylesheet" href="assets/css/register_style.css" >
 </head>
 
 <body>
