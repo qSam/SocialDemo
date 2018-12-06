@@ -12,7 +12,9 @@
 </head>
 
 <body>
-  <form action="register.php" method="POST">
+  <div class="wrapper">
+    <div class="login_box">
+    <form action="register.php" method="POST">
     <input type="email" name="log_email" placeholder="Email address"
     value="<?php
     if(isset($_SESSION['log_email'])){
@@ -95,6 +97,8 @@
       }
        ?>
   </form>
+</div>
+</div>
 </body>
 
 </html>
