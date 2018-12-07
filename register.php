@@ -9,6 +9,8 @@
 <head>
   <title>Social Demo</title>
   <link rel="stylesheet" href="assets/css/register_style.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="assets/js/register.js"></script>
 </head>
 
 <body>
@@ -20,6 +22,7 @@
         Login or Sign Up Below
       </div>
 
+    <div id="first">
     <form action="register.php" method="POST">
     <input type="email" name="log_email" placeholder="Email address"
     value="<?php
@@ -33,6 +36,7 @@
     <br />
     <input type="submit" name="login_button" value="Login">
     <br />
+    <a href="#" id="signup" class="signup">Need an account? Regsiter here</a>
     <?php
     if(in_array("Email or password was incorrect", $error_array)) {
       echo "Email or password was incorrect";
@@ -41,7 +45,11 @@
      ?>
 
   </form>
+  </div>
 
+
+
+  <div id="second">
   <form action="register.php" method="POST">
       <input type="text" name="reg_fname" placeholder="First Name"
       value="<?php
@@ -102,7 +110,11 @@
         echo "<span style='color: #14C800'>You are all set! Please login.</span><br />";
       }
        ?>
+
+
+       <a href="#" id="signin" class="signin">Already have an account? Sign in here</a>
   </form>
+</div>
 </div>
 </div>
 </body>

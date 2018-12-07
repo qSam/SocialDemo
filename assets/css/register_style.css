@@ -17,6 +17,11 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #3498db;
+}
+
 .wrapper {
   background-image: url('../images/backgrounds/desktop.jpg');
   background-size: 100%;
@@ -45,6 +50,10 @@ body {
   height: 90px;
   background-color: #ffffff;
   text-align: center;
+}
+
+#second {
+  dislay: none;
 }
 
 input[type='submit'] {
