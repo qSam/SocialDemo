@@ -14,6 +14,19 @@
 </head>
 
 <body>
+  <?php
+    if(isset($_POST['register_post'])) {
+      echo '
+        <script>
+          $document.ready(function(){
+            $("#first").hide();
+            $("#second").show();
+          });
+        </script>
+      ';
+    }
+   ?>
+
   <div class="wrapper">
 
     <div class="login_box">
@@ -36,13 +49,13 @@
     <br />
     <input type="submit" name="login_button" value="Login">
     <br />
-    <a href="#" id="signup" class="signup">Need an account? Regsiter here</a>
     <?php
     if(in_array("Email or password was incorrect", $error_array)) {
       echo "Email or password was incorrect";
     }
-
      ?>
+     <br />
+     <a href="#" id="signup" class="signup">Need an account? Regsiter here</a>
 
   </form>
   </div>
@@ -110,8 +123,7 @@
         echo "<span style='color: #14C800'>You are all set! Please login.</span><br />";
       }
        ?>
-
-
+       <br />
        <a href="#" id="signin" class="signin">Already have an account? Sign in here</a>
   </form>
 </div>
