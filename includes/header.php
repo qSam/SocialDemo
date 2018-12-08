@@ -18,6 +18,7 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
@@ -26,4 +27,12 @@
       <div class="logo">
           <a href="index.php">Seattle Feed</a>
       </div>
+
+      <nav>
+        <a href="#"><i class="fa fa-home fa-lg"></i></a>
+        <a href="#"><i class="fa fa-envelope fa-lg"></i></a>
+        <a href="#"><i class="fa fa-bell fa-lg"></i></a>
+        <a href="#"><i class="fa fa-users fa-lg"></i></a>
+        <a href="#"><i class="fa fa-cog fa-lg"></i></a>
+      </nav>
   </div>
