@@ -1,0 +1,9 @@
+.top_bar {
+  width: 100%;
+  min-width: 1050px;
+  height: 40px;
+  background-color: #62b8f8;
+  border-bottom: 5px solid #055997;
+  margin: 0 0 10px 0;
+  display: inline-flex;
+}
