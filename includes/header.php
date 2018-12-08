@@ -3,6 +3,8 @@
 
   if (isset($_SESSION['username'])){
     $userLoggedIn = $_SESSION['username'];
+    $user_details_query = mysqli_query($con, "SELECT * FROM users where username='$userLoggedIn'");
+    $user = mysqli_fetch_array($user_details_query);
   } else {
     header("Location: register:php");
   }
@@ -29,6 +31,11 @@
       </div>
 
       <nav>
+        <a href="#">
+          <?php
+            echo $user['first_name'];
+          ?>
+        </a>
         <a href="#"><i class="fa fa-home fa-lg"></i></a>
         <a href="#"><i class="fa fa-envelope fa-lg"></i></a>
         <a href="#"><i class="fa fa-bell fa-lg"></i></a>
