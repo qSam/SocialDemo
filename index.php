@@ -1,7 +1,6 @@
 <?php
   include("includes/header.php");
 ?>
-  <div class="wrapper_main">
   <div class="user_details column">
     <a href="#"> <img src="<?php echo $user['profile_pic']; ?>"> </a>
     <div class="user_details_left_right">

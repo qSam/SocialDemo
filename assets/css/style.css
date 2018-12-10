@@ -50,7 +50,7 @@ nav a {
   font-size: 17px;
 }
 
-.wrapper_main {
+.wrapper {
   margin: 0 auto;
   top: 50px;
   position: relative;
@@ -72,4 +72,16 @@ nav a {
   width: 250px;
   float: left;
   margin-bottom: 20px;
+}
+
+.user_details_left_right {
+  width: 125px;
+  display: inline-block;
+  position: absolute;
+}
+
+.user_details img {
+  height: 125px;
+  border-radius: 5px;
+  margin-right: 5px;
 }
