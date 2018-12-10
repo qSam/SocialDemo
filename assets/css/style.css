@@ -24,14 +24,6 @@ body {
   position: fixed;
 }
 
-.wrapper_main {
-  margin: 0 auto;
-  top: 50px;
-  position: relative;
-  padding: 0 10px;
-  width: 75%;
-}
-
 .logo a {
   font-family: 'Bellota-BoldItalic', sans-serif;
   margin-left: 10px;
@@ -56,6 +48,15 @@ nav a {
   color: #fff;
   text-decoration: none;
   font-size: 17px;
+}
+
+.wrapper_main {
+  margin: 0 auto;
+  top: 50px;
+  position: relative;
+  padding: 0 10px;
+  width: 75%;
+  min-width: 950px;
 }
 
 .column {
