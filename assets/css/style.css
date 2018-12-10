@@ -87,9 +87,8 @@ nav a {
 }
 
 .main_column {
-  margin-left: : 15%;
+  float: : right;
   width: 70%;
-  z-index: -1;
   min-height: 160px;
 }
 
@@ -108,4 +107,23 @@ nav a {
 
 textaread:focus {
   outline: 0;
+}
+
+.post_form input[type="submit"] {
+  width: 10%;
+  height: 60px;
+  border: none;
+  background-color: #3498db;
+  font-family: 'Bellota-BoldItalic', sans-serif;
+  color: #fff;
+  font-size: 90%;
+  position: absolute;
+  outline: 0;
+  margin: 0;
+  border-radius: 5px;
+}
+
+
+.post_form input[type="submit"]:active {
+  padding: 5px 4px 4px 5px;
 }
