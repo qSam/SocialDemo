@@ -16,5 +16,9 @@ class User {
       return $row['first_name']." ".$row['last_name'];
     }
 
+    public function getUsername() {
+      return $this->user['username'];
+    }
+
 }
 ?>
