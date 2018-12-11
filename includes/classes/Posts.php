@@ -56,8 +56,16 @@ class Post {
         } else {
           $user_to_obj = new User($con, $row['user_to']);
           $user_to_name = $user_to_obj->getFirstAndLastName();
-          $user_to = "<a href='".$row['user)to']."'>".$user_to_name."</a>";
+          $user_to = "<a href='".$row['user_to']."'>".$user_to_name."</a>";
         }
+
+        //Cheeck if user account who posted has account closed
+        $added_by_obj = new User($con, $added_by);
+        if($added_by_obj->isClosed()) {
+          continue;
+        }
+        $user_details_query = mysqli_query_con($this->con, "SELECT first_name, last_name, profile_pic FROM users WHERE username='$added_by'");
+        $user_row = mysqli_fetch_array($user_details_query);
       }
     }
 
