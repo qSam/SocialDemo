@@ -134,6 +134,7 @@ class Post {
                   <br />
                 </div>
               </div>
+              <hr />
         ";
       }
       echo $str;
