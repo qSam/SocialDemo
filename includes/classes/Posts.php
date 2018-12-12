@@ -96,6 +96,30 @@ class Post {
           } else {
             $time_message = $interval->m." months".$days;
           }
+        } else if($interval->d >= 1) {
+          if($interval->d == 1) {
+            $time_message = "Yesterday";
+          } else {
+            $time_message = $interval->d." days ago";
+          }
+        } else if($interval->h >= 1) {
+          if($interval->h == 1) {
+            $time_message =  " hour ago";
+          } else {
+            $time_message = $interval->d." hours ago";
+          }
+        } else if($interval->i >= 1) {
+          if($interval->i == 1) {
+            $time_message =  " minute ago";
+          } else {
+            $time_message = $interval->i." minutes ago";
+          }
+        } else {
+          if($interval->s < 30) {
+            $time_message =  " Just now";
+          } else {
+            $time_message = $interval->s." seconds ago";
+          }
         }
       }
     }
