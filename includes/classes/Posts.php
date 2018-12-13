@@ -38,11 +38,26 @@ class Post {
       }
     }
 
-    public function loadPostsFriends() {
-      $str = "";
-      $data = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' ORDER BY id DESC");
+    public function loadPostsFriends($data, $limit) {
 
-      while($row=mysqli_fetch_array($data)) {
+      $page = $data['page'];
+      $userLoggedIn = $this->user_obj->getUsername();
+
+      if($page==1) {
+        $start = 0;
+      } else {
+        $start = ($page - 1) + $limit;
+      }
+
+      $str = "";
+      $data_query = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' ORDER BY id DESC");
+
+      if(mysqli_num_rows($data_query) > 0) {
+
+      $num_iterations = 0;
+      $count = 1;
+
+      while($row=mysqli_fetch_array($data_query)) {
         $id = $row['id'];
         $body = $row['body'];
         $added_by = $row['added_by'];
@@ -61,6 +76,17 @@ class Post {
         $added_by_obj = new User($this->con, $added_by);
         if($added_by_obj->isClosed()) {
           continue;
+        }
+
+        if ($num_iterations++ < $start) {
+          continue;
+        }
+
+        //Once 10 posts have been loaded, break
+        if($count > $limit) {
+          break;
+        } else {
+          $count++;
         }
         $user_details_query = mysqli_query($this->con, "SELECT first_name, last_name, profile_pic FROM users WHERE username='$added_by'");
         $user_row = mysqli_fetch_array($user_details_query);
@@ -137,6 +163,7 @@ class Post {
               <hr />
         ";
       }
+    }
       echo $str;
     }
 
