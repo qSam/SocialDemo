@@ -32,7 +32,7 @@
     </form>
 
     <div class="posts_area"></div>
-    <img id="#loading" src="assets/images/icons/loading_gif.gif">
+    <img id="loading" src="assets/images/icons/loading_gif.gif">
   </div>
 
   <script>
