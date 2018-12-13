@@ -30,10 +30,8 @@
       <input type="submit" name="post" id="post_button" value="Post">
       <hr />
     </form>
-    <?php
-      $post = new Post($con, $userLoggedIn);
-      $post->loadPostsFriends();
-    ?>
+
+    <div class="posts_area"></div>
     <img id="#loading" src="assets/images/icons/loading_gif.gif">
   </div>
 
@@ -45,8 +43,13 @@
       $.ajax({
         url: "includes/handlers/ajax_load_posts.php",
         type: "POST",
-        data: "page=1&userLoggedIn="
-      })
+        data: "page=1&userLoggedIn=" + userLoggedIn,
+        cache: false,
+        success: function(data) {
+            $("#loading").hide();
+            $('.posts_area').html(data);
+        }
+      });
     });
   </script>
 
