@@ -3,7 +3,7 @@
   include("../classes/User.php");
   include("../classes/Posts.php");
 
-  //Number of posts to be loader per posts
+  //Number of posts to be loaded per posts
   $limit = 10;
 
   $posts = new Post($con, $_REQUEST['userLoggedIn']);
