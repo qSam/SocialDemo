@@ -155,7 +155,7 @@ class Post {
           if($interval->h == 1) {
             $time_message =  " hour ago";
           } else {
-            $time_message = $interval->d." hours ago";
+            $time_message = $interval->h." hours ago";
           }
         } else if($interval->i >= 1) {
           if($interval->i == 1) {
