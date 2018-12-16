@@ -43,18 +43,18 @@
         $post_body = $_POST['post_body'];
         $post_body = mysqli_escape_string($con, $post_body);
         $date_time_now = date("Y-m-d H:i:s");
-        $insert_post = mysqli_query($con,"INSERT INTO comments VALUES('','$post_body','$userLoggedIn','$posted_to','$date_time_now','no','$post_id')");
+        $insert_post = mysqli_query($con,"INSERT INTO post_comments VALUES('','$post_body','$userLoggedIn','$posted_to','$date_time_now','no','$post_id')");
         echo "<p>Comment posted!</p>";
       }
     ?>
 
-    <form action="comment_frame.php?post_id=<?php echo $post_id ?>" id="comment_form" name="postComment<?php echo $post_id ?>" method="POST">
+    <form action="comment_frame.php?post_id=<?php echo $post_id; ?>" id="comment_form" name="postComment<?php echo $post_id; ?>" method="POST">
       <textarea name="post_body"></textarea>
-      <input type="submit" name="postComment<?php echo $post_id ?>" value="Post">
+      <input type="submit" name="postComment<?php echo $post_id; ?>" value="Post">
     </form>
 
     <!-- Load comments -->
-    
+
 
   </body>
 </html>
