@@ -152,6 +152,7 @@ textaread:focus {
 #comment_iframe {
   max-height: 250px;
   width: 100%;
+  background-color: #e6eae8;
 }
 
 .comment_section {
@@ -182,4 +183,11 @@ textaread:focus {
   height: 35px;
   margin-top: 3px;
   position: absolute;
+}
+
+.newsfeedPostOptions {
+  padding: 0px;
+  text-decoration: none;
+  border: none;
+  color: #337ab7;
 }
