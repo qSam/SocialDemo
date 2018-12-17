@@ -4,6 +4,21 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
   <body>
+
+    <style type="text/css">
+    *{
+      font-size: 12px;
+      font-family: Arial, Helvetica, Sans-serif;
+      }
+      body {
+        background-color: #fff;
+      }
+
+      newsfeedPostOptions form {
+        position: absolute;
+        top:0;
+      }
+    </style>
     <?php
       require 'config/config.php';
       include("includes/classes/User.php");
