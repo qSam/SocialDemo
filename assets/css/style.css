@@ -167,3 +167,14 @@ textaread:focus {
   font-size: 14px;
   margin: 3px 3px 3px 5px;
 }
+
+#comment_form input[type="submit"] {
+  border: none;
+  background-color: #22AAE5;
+  color: #fff;
+  border-radius: 5px;
+  width: 13%;
+  height: 35px;
+  margin-top: 3px;
+  position: absolute;
+}
