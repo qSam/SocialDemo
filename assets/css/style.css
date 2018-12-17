@@ -50,6 +50,11 @@ nav a {
   font-size: 17px;
 }
 
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
 .wrapper {
   margin: 0 auto;
   top: 50px;
