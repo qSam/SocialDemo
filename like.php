@@ -32,7 +32,7 @@
         header("Location: register:php");
       }
 
-      //Get id of post
+      //Get id of given post
       if(isset($_GET['post_id'])){
         $post_id = $_GET['post_id'];
       }
