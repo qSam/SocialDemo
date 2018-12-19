@@ -25,6 +25,7 @@
     ?>
 
     <script>
+      //Function to toggle comments section
       function toggle() {
         var element = document.getElementById("comment_section");
         if(element.style.display == "block") {
