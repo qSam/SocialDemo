@@ -213,3 +213,17 @@ textaread:focus {
   display: inline;
   font-size: 14px;
 }
+
+.profile_left {
+  top: -10px;
+  width: 17%;
+  max-width: 240px;
+  min-width: 130px;
+  height: 100%;
+  float: left;
+  position: relative;
+  background-color: #37B8E9;
+  border-right: 10px solid #83GDFE;
+  color: #CBEAF8;
+  margin-right: 20px;
+}
