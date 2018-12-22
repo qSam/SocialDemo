@@ -222,8 +222,8 @@ textaread:focus {
   height: 100%;
   float: left;
   position: relative;
-  background-color: #3385ff;
-  border-right: 10px solid #e6eae8;
+  background-color: #055997;
+  border-right: 10px solid #2984B9;
   color: #CBEAF8;
   margin-right: 20px;
 }
@@ -235,4 +235,16 @@ textaread:focus {
   border: 5px solid #B3D6FE;
   border-radius: 100px;
 
+}
+
+.profile_info {
+  display: list-item;
+  background-color: #2984B9;
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
+
+.profile_info p {
+  margin: 0 0 0 20px;
+  word-wrap: break-word;
 }
