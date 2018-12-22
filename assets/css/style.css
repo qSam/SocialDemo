@@ -222,8 +222,17 @@ textaread:focus {
   height: 100%;
   float: left;
   position: relative;
-  background-color: #37B8E9;
-  border-right: 10px solid #83GDFE;
+  background-color: #3385ff;
+  border-right: 10px solid #e6eae8;
   color: #CBEAF8;
   margin-right: 20px;
+}
+
+.profile_left img {
+  min-width: 80px;
+  width: 55%;
+  margin: 20px;
+  border: 5px solid #B3D6FE;
+  border-radius: 100px;
+
 }
