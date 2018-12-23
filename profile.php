@@ -1,5 +1,7 @@
 <?php
   include("includes/header.php");
+  include("includes/classes/User.php");
+  include("includes/classes/Posts.php");
 
   if(isset($_GET['profile_username'])) {
     $username = $_GET['profile_username'];
@@ -26,6 +28,14 @@
           <p><?php echo "Likes: ".$user_array['num_likes']; ?></p>
           <p><?php echo "Friends: ".$num_friends; ?></p>
       </div>
+
+      <form action="<?php echo $username; ?>">
+        <?php $profile_user_obj = new User($con, $username);
+        if($profile_user_obj=>isClosed()) {
+          header("Location: user_closed.php");
+        }
+        ?>
+      </form>
     </div>
 
 
