@@ -31,9 +31,19 @@
 
       <form action="<?php echo $username; ?>">
         <?php $profile_user_obj = new User($con, $username);
-        if($profile_user_obj=>isClosed()) {
+        if($profile_user_obj->isClosed()) {
           header("Location: user_closed.php");
         }
+
+        $logged_in_user_obj = new User($con, $userLoggedIn);
+        if($userLoggedIn != $username) {
+          if($logged_in_user_obj->isFriend($username)){
+            echo '<input type="submit" name="remove_friend" class="danger" value="Remove Friend"><br />';
+          } else if ($logged_in_user_obj->didReceiveRequest($username)) {
+            
+          }
+        }
+
         ?>
       </form>
     </div>
